@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>前端作品集 | 全栈前端开发工程师</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft YaHei", system-ui, sans-serif;
+    }
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #e2e8f0;
+      --text-2: #94a3b8;
+      --primary: #38bdf8;
+      --border: #334155;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
+      padding: 60px 0;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      font-size: 34px;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    header p {
+      color: var(--text-2);
+      font-size: 18px;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .tags {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .tag {
+      background: rgba(56,189,248,0.12);
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+    section {
+      margin-top: 60px;
+    }
+    .section-title {
+      font-size:24px;
+      margin-bottom:30px;
+      border-left:4px solid var(--primary);
+      padding-left:14px;
+    }
+    .project-card {
+      background: var(--card-bg);
+      border-radius:14px;
+      padding:28px;
+      margin-bottom:28px;
+      border:1px solid var(--border);
+      transition: 0.25s ease;
+    }
+    .project-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+    }
+    .project-card h3 {
+      font-size: 22px;
+      margin-bottom:10px;
+      color:#fff;
+    }
+    .project-meta {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:16px;
+    }
+    .meta-tag {
+      background:#334155;
+      font-size:13px;
+      padding:3px 10px;
+      border-radius:6px;
+    }
+    .project-desc {
+      color:var(--text-2);
+      margin-bottom:16px;
+    }
+    .sub-title {
+      font-size:16px;
+      margin:18px 0 8px;
+      color:#cbd5e1;
+    }
+    ul {
+      padding-left:20px;
+      color:var(--text-2);
+    }
+    li {
+      margin-bottom:6px;
+    }
+    .link-group {
+      margin-top:20px;
+      display:flex;
+      gap:16px;
+    }
+    a.btn {
+      display:inline-block;
+      padding:8px 18px;
+      border-radius:8px;
+      text-decoration:none;
+      font-size:15px;
+    }
+    .btn-demo {
+      background:var(--primary);
+      color:#0f172a;
+    }
+    .btn-git {
+      border:1px solid var(--primary);
+      color:var(--primary);
+    }
+    footer {
+      text-align:center;
+      margin-top:80px;
+      color:var(--text-2);
+      font-size:14px;
+    }
+    @media (max-width:768px) {
+      header h1 {
+        font-size:26px;
+      }
+      .project-card {
+        padding:20px;
+      }
+      .link-group {
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>全栈前端开发工程师 | 作品集</h1>
+      <p>擅长 Vue2/Vue3 + Element Plus / ECharts / TypeScript，独立开发后台管理系统、数据可视化大屏、文档在线预览；熟练复杂表格联动、文件流处理、前端工程化与部署，可远程接单协作。</p>
+      <div class="tags">
+        <span class="tag">Vue2/Vue3</span>
+        <span class="tag">Element Plus</span>
+        <span class="tag">ECharts可视化</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Blob文件处理</span>
+        <span class="tag">Git</span>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title">项目作品</h2>
+
+      <!-- 项目1：能源配电网数据管理后台 -->
+      <div class="project-card">
+        <h3>能源配电网数据管理后台</h3>
+        <div class="project-meta">
+          <span class="meta-tag">Vue3</span>
+          <span class="meta-tag">Element Plus</span>
+          <span class="meta-tag">ECharts</span>
+          <span class="meta-tag">TypeScript</span>
+        </div>
+        <p class="project-desc">配电网项目管理平台，用于市县电网项目台账、债权债务、合同资质、项目投产进度统一管理，支持多条件筛选、多级表头、批量勾选联动、数据导出、可视化看板。</p>
+
+        <h4 class="sub-title">功能模块</h4>
+        <ul>
+          <li>项目台账：多级表头el-table，跨表多选联动、批量编辑、分页检索、Excel导出</li>
+          <li>可视化看板：ECharts折线/柱状/江西地图下钻，项目开工投产进度统计、市县项目画像</li>
+          <li>合同资质：文件上传、PDF/OFD/Excel在线预览、二进制文件流处理</li>
+          <li>权限控制：路由+按钮权限，不同角色菜单隔离</li>
+        </ul>
+
+        <h4 class="sub-title">个人职责</h4>
+        <p class="project-desc">独立负责前端全部开发，需求对接、组件封装、接口联调、性能优化、打包部署。</p>
+
+        <h4 class="sub-title">难点 & 解决方案</h4>
+        <ul>
+          <li>多表格跨表勾选同步：Map缓存选中行，监听selection事件，实现多表格勾选数据联动</li>
+          <li>ECharts江西地图下钻：GeoJSON加载，双击切换省市县，解决地图缩放异常问题</li>
+          <li>文档预览：原生方案实现PDF/OFD/Excel预览，减少第三方包体积</li>
+          <li>大数据列表卡顿：虚拟滚动+懒加载，减少DOM渲染数量</li>
+        </ul>
+
+        <div class="link-group">
+          <a href="#" class="btn btn-demo">在线Demo</a>
+          <a href="#" class="btn btn-git">源码仓库</a>
+        </div>
+      </div>
+
+      <!-- 项目2：数据可视化大屏 -->
+      <div class="project-card">
+        <h3>配电网项目数据驾驶舱大屏</h3>
+        <div class="project-meta">
+          <span class="meta-tag">Vue2</span>
+          <span class="meta-tag">ECharts</span>
+          <span class="meta-tag">SCSS</span>
+        </div>
+        <p class="project-desc">配电网转型升级项目数据驾驶舱大屏，展示项目指标、资金统计、工程进度；适配固定大屏尺寸，支持警戒线、数字滚动动画。</p>
+
+        <h4 class="sub-title">功能模块</h4>
+        <ul>
+          <li>指标卡片：动态数字滚动、指标预警颜色提示</li>
+          <li>图表组件：柱状图、折线图、环形图、雷达图、圆角仪表盘</li>
+          <li>交互：图例开关、hover提示、点击事件、数据筛选切换</li>
+          <li>自适应处理：修复图表resize、Tab切换实例内存泄漏</li>
+        </ul>
+
+        <h4 class="sub-title">个人职责</h4>
+        <p class="project-desc">独立完成全部图表开发、样式调整、交互逻辑，解决ECharts各类细节配置问题。</p>
+
+        <h4 class="sub-title">难点 & 解决方案</h4>
+        <ul>
+          <li>环形图圆角roundCap失效：修正series borderCap参数配置</li>
+          <li>tooltip文字溢出：自定义formatter做换行截断</li>
+          <li>Tab切换图表重复渲染：销毁旧实例，防止内存泄漏</li>
+          <li>坐标轴极值异常：动态计算Y轴max/min，调整boundaryGap边界</li>
+        </ul>
+
+        <div class="link-group">
+          <a href="#" class="btn btn-demo">在线Demo</a>
+          <a href="#" class="btn btn-git">源码仓库</a>
+        </div>
+      </div>
+
+      <!-- 项目3：文档在线预览工具 -->
+      <div class="project-card">
+        <h3>轻量文档在线预览Demo</h3>
+        <div class="project-meta">
+          <span class="meta-tag">原生JS</span>
+          <span class="meta-tag">Blob</span>
+          <span class="meta-tag">FileReader</span>
+        </div>
+        <p class="project-desc">轻量文档预览组件，前端直接解析后端文件流，支持PDF、OFD、Excel在线预览，可直接嵌入各类后台系统。</p>
+
+        <h4 class="sub-title">功能模块</h4>
+        <ul>
+          <li>文件上传，接收后端二进制Blob文件流</li>
+          <li>PDF/OFD预览：页面翻页、缩放控制</li>
+          <li>Excel前端解析，渲染表格展示内容</li>
+          <li>异常捕获：文件损坏、超大文件、跨域处理</li>
+        </ul>
+
+        <h4 class="sub-title">个人职责</h4>
+        <p class="project-desc">独立实现文件解析、预览组件封装、异常捕获，组件可复用嵌入后台项目。</p>
+
+        <h4 class="sub-title">难点 & 解决方案</h4>
+        <ul>
+          <li>后端文件流乱码：配置responseType: blob，处理二进制编码</li>
+          <li>OFD预览轻量化：选用轻解析库，减少打包体积</li>
+          <li>大文件渲染卡顿：分片读取+页面懒加载</li>
+        </ul>
+
+        <div class="link-group">
+          <a href="#" class="btn btn-demo">在线Demo</a>
+          <a href="#" class="btn btn-git">源码仓库</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>作品集 · 前端远程开发 | 可承接后台管理、可视化大屏、前端bug修复与功能迭代</p>
+    </footer>
+  </div>
+</body>
+</html>
